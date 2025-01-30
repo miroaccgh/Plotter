@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+requires = "> 3.3.1"
+name = "plotter"
+version = "1.0.0"
+dependencies = [
+    "redis[hiredis]>=1.0",
+    "pygame=2.6.0",
+    "pytest=8.3.4",
+    "pylint=3.3.4",
+    "paho-mqtt=2.1.0",
+]
