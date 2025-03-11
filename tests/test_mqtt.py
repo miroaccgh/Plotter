@@ -1,4 +1,4 @@
-import MqttClient
+from src.mqtt.mqtt_client import MqttClient
 
 def test_connect():
     """
