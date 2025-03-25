@@ -1,0 +1,16 @@
+volumes:
+  vol-broker-data:
+    name: broker-data
+  vol-broker-log:
+    name: broker-log
+
+services:
+  broker:
+    image: emqx:latest
+    restart: always
+    environment:
+      EMQX_CLUSTER__DISCOVERY_STRATEGY: static
+      EMQX_NODE__NAME: broker@127.0.0.1
+    volumes:
+      - vol-broker-data:/opt/emqx/data
+      - vol-broker-log:/opt/emqx/log
